@@ -1,16 +1,25 @@
 .header {
+  display: flex;
+  justify-content: space-between;
+  border: transparent;
+  background: #fefefe;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
   @media screen and (min-width: 1280px) {
     display: flex;
     align-items: center;
     justify-content: end;
-
-    border: transparent;
-    background: #fefefe;
-    box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
   }
 }
 
 .logo__icon {
+  width: 66px;
+  height: 52px;
+  text-decoration: none;
   @media screen and (min-width: 1280px) {
     width: 66px;
     height: 52px;
@@ -18,7 +27,23 @@
   }
 }
 
+.page-header__icon-open {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+  }
+}
+.page-header__icon-open {
+  display: block;
+}
+
 .menu {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    list-style: none;
+    margin-left: auto;
+  }
   @media screen and (min-width: 1280px) {
     display: flex;
     list-style: none;
@@ -27,6 +52,13 @@
 }
 
 .menu__item {
+  @media screen and (min-width: 768px) {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    &:not(:first-child) {
+      margin-left: 28px;
+    }
+  }
   @media screen and (min-width: 1280px) {
     padding-top: 28px;
     padding-bottom: 28px;
@@ -37,6 +69,13 @@
 }
 
 .menu__link {
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.14;
+    text-decoration: none;
+
+    color: #2c2c2c;
+  }
   @media screen and (min-width: 1280px) {
     font-size: 14px;
     line-height: 1.14;
@@ -47,9 +86,23 @@
 }
 
 .order {
-  @media screen and (max-width: 767px) {
-    display: none;
+  display: none;
+  @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 30px;
+    border-radius: 30px;
+    border: transparent;
+    padding: 6px 18px;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5em;
+    text-transform: capitalize;
+    background-color: #bbf330;
+    color: #2c2c2c;
+    cursor: pointer;
   }
+
   @media screen and (min-width: 1280px) {
     margin-left: 30px;
     border-radius: 30px;
@@ -63,5 +116,18 @@
     background-color: #bbf330;
     color: #2c2c2c;
     cursor: pointer;
+  }
+}
+
+.page-header__icon-open {
+  display: block;
+}
+
+.page-header__btn-open {
+  display: block;
+  border: none;
+  background-color: #fefefe;
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
