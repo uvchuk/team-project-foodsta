@@ -1,0 +1,57 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  color: var(--prim-text);
+  background-color: var(--prim-bcgd);
+}
+body.locked {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --accent: #bbf330;
+  --accent-scnd: #ffe550;
+  --prim-text: #2c2c2c;
+  --scnd-text: #000000;
+  --prim-bcgd: #fefefe;
+  --scnd-bcgd: #f5f5f5;
+  --tert-bcgd: #ffffff;
+  --btn-bcgd-focus: #b5ff00;
+  --border-color: #7eb101;
+  --border-focus: #597d00;
+  --placeholder: #c4c4c4;
+  --backdrop: rgba(94, 99, 99, 0.7);
+}/*# sourceMappingURL=index.css.map */
