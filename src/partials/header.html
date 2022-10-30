@@ -1,20 +1,26 @@
+<!-- Шапка -->
 <header class="page-header">
-  <nav class="header container">
+  <nav class="header header__container">
+    <!-- Header logo -->
     <a href="#" class="logo"
       ><svg class="logo__icon">
-        <use href="../images/sprite.svg#logo"></use>
+        <use href="./images/sprite.svg#logo"></use>
       </svg>
     </a>
+    <!-- Header nav -->
     <ul class="menu">
-      <li class="menu__item"><a class="menu__link" href="#">home</a></li>
+      <li class="menu__item">
+        <a class="menu__link menu__link--current" href="#">home</a>
+      </li>
       <li class="menu__item"><a class="menu__link" href="#">about</a></li>
       <li class="menu__item"><a class="menu__link" href="#">service</a></li>
       <li class="menu__item"><a class="menu__link" href="#">menu</a></li>
       <li class="menu__item"><a class="menu__link" href="#">contact</a></li>
     </ul>
+    <!-- Header button -->
     <button class="page-header__btn-open" type="button" data-menu-open>
       <svg class="page-header__icon-open" width="28" height="28">
-        <use href="../images/sprite.svg#burger"></use>
+        <use href="./images/sprite.svg#burger"></use>
       </svg>
     </button>
     <button class="order" type="button">order now</button>

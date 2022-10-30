@@ -1,39 +1,29 @@
+.header__container {
+  @extend %container;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: transparent;
-  background: #fefefe;
-  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+  background: var(--prim-bcgd);
+  box-shadow: 0px 4px 24px var(--box-shadow-header);
+
   @media screen and (min-width: 768px) {
-    display: flex;
-    align-items: center;
     justify-content: end;
   }
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    align-items: center;
-    justify-content: end;
-  }
+}
+
+.logo {
+  padding: 10px 0;
 }
 
 .logo__icon {
   width: 66px;
   height: 52px;
-  text-decoration: none;
-  @media screen and (min-width: 1280px) {
-    width: 66px;
-    height: 52px;
-    text-decoration: none;
-  }
-}
 
-.page-header__icon-open {
-  @media screen and (max-width: 767px) {
-    display: inline-block;
-  }
-}
-.page-header__icon-open {
-  display: block;
+  text-decoration: none;
 }
 
 .menu {
@@ -44,24 +34,13 @@
     list-style: none;
     margin-left: auto;
   }
-  @media screen and (min-width: 1280px) {
-    display: flex;
-    list-style: none;
-    margin-left: auto;
-  }
 }
 
 .menu__item {
   @media screen and (min-width: 768px) {
     padding-top: 28px;
     padding-bottom: 28px;
-    &:not(:first-child) {
-      margin-left: 28px;
-    }
-  }
-  @media screen and (min-width: 1280px) {
-    padding-top: 28px;
-    padding-bottom: 28px;
+
     &:not(:first-child) {
       margin-left: 28px;
     }
@@ -74,19 +53,20 @@
     line-height: 1.14;
     text-decoration: none;
 
-    color: #2c2c2c;
+    color: var(--prim-text);
   }
-  @media screen and (min-width: 1280px) {
-    font-size: 14px;
-    line-height: 1.14;
-    text-decoration: none;
+}
 
-    color: #2c2c2c;
-  }
+.menu__link--current:hover,
+.menu__link--current:focus {
+  text-decoration-line: underline;
+
+  color: var(--accent);
 }
 
 .order {
   display: none;
+
   @media screen and (min-width: 768px) {
     display: block;
     margin-left: 30px;
@@ -98,23 +78,8 @@
     font-size: 13px;
     line-height: 1.5em;
     text-transform: capitalize;
-    background-color: #bbf330;
-    color: #2c2c2c;
-    cursor: pointer;
-  }
-
-  @media screen and (min-width: 1280px) {
-    margin-left: 30px;
-    border-radius: 30px;
-    border: transparent;
-    padding: 6px 18px;
-    font-family: inherit;
-    font-weight: 500;
-    font-size: 13px;
-    line-height: 1.5em;
-    text-transform: capitalize;
-    background-color: #bbf330;
-    color: #2c2c2c;
+    background-color: var(--accent);
+    color: var(--prim-text);
     cursor: pointer;
   }
 }
@@ -126,7 +91,10 @@
 .page-header__btn-open {
   display: block;
   border: none;
-  background-color: #fefefe;
+  padding: 22px 0;
+  background-color: var(--prim-bcgd);
+  fill: var(--border-color);
+
   @media screen and (min-width: 768px) {
     display: none;
   }
