@@ -435,6 +435,7 @@ a {
 }
 .offerings__btn:hover, .offerings__btn:focus {
   border-color: var(--border-focus);
+  cursor: pointer;
 }
 .offerings__click-items {
   display: flex;
@@ -453,6 +454,7 @@ a {
 }
 .offerings__link:hover, .offerings__link:focus {
   color: var(--border-focus);
+  cursor: pointer;
 }
 .offerings__svg {
   fill: currentColor;

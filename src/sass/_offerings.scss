@@ -91,6 +91,7 @@
     
         &:hover, &:focus {
             border-color: var(--border-focus);
+            cursor: pointer;
         }
     }
 
@@ -111,6 +112,7 @@
 
         &:hover, &:focus {
             color: var(--border-focus);
+            cursor: pointer;
         }
     }
 
