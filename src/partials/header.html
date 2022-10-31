@@ -1,0 +1,47 @@
+<!-- Шапка -->
+<header class="page-header">
+  <div class="page-header__container">
+    <!-- Header logo -->
+    <a href="#" class="logo"
+      ><svg class="logo__icon">
+        <use href="./images/sprite.svg#logo"></use>
+      </svg>
+    </a>
+    <div class="page-header__menu">
+      <!-- Header nav -->
+      <nav class="navigation-list" data-menu>
+        <ul class="menu">
+          <li class="menu__item">
+            <a class="menu__link menu__link--current" href="#hero">Hero</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#offerings">Offerings</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#favorites">Favorites</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#customers Say">Customers Say</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#subscribe">Subscribe</a>
+          </li>
+        </ul>
+        <button class="page-header__btn-close" type="button" data-menu-close>
+          <svg class="page-header__icon-close" width="24" height="24">
+            <use href="./images/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </nav>
+      <!-- Header button -->
+
+      <button class="page-header__btn-open" type="button" data-menu-open>
+        <svg class="page-header__icon-open" width="28" height="28">
+          <use href="./images/sprite.svg#burger"></use>
+        </svg>
+      </button>
+    </div>
+    <button class="order" type="button" data-modal-open>Order now</button>
+  </div>
+</header>
+<script src="./menu.js"></script>
