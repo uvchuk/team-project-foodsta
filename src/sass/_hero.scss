@@ -3,15 +3,15 @@
   align-items: center;
 }
 .hero__info {
-  @media screen and (max-width: 767px) {
+  @include mobile {
     padding: 60px 20px 50px;
   }
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     padding-top: 60px;
     padding-left: 32px;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     padding-top: 159px;
     padding-left: 16px;
   }
@@ -25,14 +25,14 @@
   margin: 0 auto;
   margin-bottom: 28px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-weight: 700;
     font-size: 42px;
     line-height: 1.19;
     width: 537px;
     margin-bottom: 44px;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     font-weight: 700;
     font-size: 48px;
     line-height: 1.21;
@@ -46,12 +46,12 @@
   max-width: 266px;
   margin-bottom: 28px;
 
-  @media screen and (min-width: 768px) {
+  @include tablet {
     font-size: 16px;
     max-width: 336px;
     margin-bottom: 40px;
   }
-  @media screen and (min-width: 1280px) {
+  @include desktop {
     font-size: 16px;
     max-width: 502px;
     margin-bottom: 40px;
