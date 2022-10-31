@@ -289,21 +289,28 @@ a {
   border: none;
   background-color: var(--tert-bcgd);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop .btn-close__icon {
   display: block;
   fill: var(--prim-text);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop .btn-close__icon:hover, .backdrop .btn-close__icon:focus {
+  fill: var(--accent);
 }
 .backdrop .modal__title {
+  text-align: center;
   font-weight: 700;
   font-size: 24px;
   line-height: 1.2;
-  text-align: center;
   margin-bottom: 20px;
+}
+.backdrop .form:not(:last-child) {
+  margin-bottom: 30px;
 }
 .backdrop .form__field {
   display: flex;
-  margin-bottom: 24px;
   flex-direction: column;
 }
 .backdrop .form__field .form__label {
@@ -311,9 +318,12 @@ a {
   font-size: 16px;
   line-height: 1.4;
   margin-bottom: 2px;
+  margin-left: 12px;
   color: var(--prim-text);
 }
 .backdrop .form__field input {
+  font-size: 16px;
+  line-height: 1.07;
   width: 100%;
   padding-top: 14px;
   padding-left: 12px;
@@ -321,17 +331,23 @@ a {
   border: 1px solid #7EB101;
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  color: var(--placeholder);
 }
 .backdrop .btn-send {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+  font-family: inherit;
   font-weight: 500;
   font-size: 13px;
   line-height: 1.5;
   padding: 10px 38px;
   margin-top: 8px;
-  background-color: var(--accent);
+  background-color: var(--tert-bcgd);
   border: 2px solid #7EB101;
   border-radius: 30px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop .btn-send:hover, .backdrop .btn-send:focus {
+  background-color: var(--accent);
 }/*# sourceMappingURL=index.css.map */
