@@ -1,15 +1,15 @@
 
-// .container {
-//     padding-left: 20px;
-//     padding-right: 20px;
-//   }
-
 @media screen and (min-width: 320px) {
 
     .container {
         padding-left: 20px;
         padding-right: 20px;
       }
+
+      .favorites {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
 
     .favorites__image {
         width: 223px;
@@ -30,10 +30,6 @@
         border-color: var(--accent);
     }
     
-    .favorites {
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
     
     .favorites__header {
         margin-left: auto;
@@ -120,9 +116,10 @@
         gap: 32px;
     }
 
-    .favorites__item {
-        margin-bottom: 0;
+    .favorites__border {
+        border: 14px solid var(--accent-scnd);
     }
+
 
     .favorites__item:nth-last-child(-n+3) {
         display: block;
@@ -141,6 +138,9 @@
         width: 315px;
     }
 
+    .favorites__border {
+        border: 16px solid var(--accent-scnd);
+    }
 }
 
 
