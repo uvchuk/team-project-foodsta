@@ -1,27 +1,24 @@
-.hero .container {
+.hero__container {
+  @extend %container;
   display: flex;
   align-items: center;
-}
-.hero__info {
+
   @include mobile {
-    padding: 60px 20px 50px;
+    padding-top: 60px;
+    padding-bottom: 50px;
   }
 
   @include tablet {
     padding-top: 60px;
-    padding-left: 32px;
   }
   @include desktop {
     padding-top: 159px;
-    padding-left: 16px;
   }
 }
-
 .hero__title {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
-  width: 280px;
   margin: 0 auto;
   margin-bottom: 28px;
 
@@ -29,8 +26,8 @@
     font-weight: 700;
     font-size: 42px;
     line-height: 1.19;
-    width: 537px;
-    margin-bottom: 44px;
+    width: 481px;
+    margin-bottom: 28px;
   }
   @include desktop {
     font-weight: 700;
@@ -43,7 +40,6 @@
 .hero__text {
   font-size: 14px;
   line-height: 1.5;
-  max-width: 266px;
   margin-bottom: 28px;
 
   @include tablet {
@@ -58,7 +54,7 @@
   }
 }
 
-.hero-btn {
+.hero__btn {
   font-weight: 500;
   font-size: 13px;
   line-height: 1.54;
