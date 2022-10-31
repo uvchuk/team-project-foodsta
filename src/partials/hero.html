@@ -1,14 +1,108 @@
- <section class="hero">
-        <div class="hero__container">
-          <div class="hero__info">
-            <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
-            <p class="hero__text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse varius enim in eros elementum tristique. Duis cursus,
-              mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam
-              libero vitae erat.
-            </p>
-            <button class="hero__btn" type="button">Order Now</button>
-          </div>
-        </div>
-      </section>
+<section class="hero">
+  <div class="hero__container">
+    <div class="hero__info">
+      <h1 class="hero__title">Enjoy Your Favorite Food From Anywhere</h1>
+      <p class="hero__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <button class="hero__btn" type="button">Order Now</button>
+    </div>
+    <div class="slider">
+      <picture class="slider__item">
+        <source
+          class="slider__image"
+          srcset="
+            ./images/slider/slider_1_tablet.webp      292w,
+            ./images/slider/slider_1_tablet@2x.webp   584w,
+            ./images/slider/slider_1_desktop.webp     528w,
+            ./images/slider/slider_1_desktop@2x.webp 1056w
+          "
+          sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+          type="image/webp"
+        />
+        <source
+          class="slider__image"
+          srcset="
+            ./images/slider/slider_1_tablet.png      292w,
+            ./images/slider/slider_1_tablet@2x.png   584w,
+            ./images/slider/slider_1_desktop.png     528w,
+            ./images/slider/slider_1_desktop@2x.png 1056w
+          "
+          sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+          type="image/png"
+        />
+        <img
+          src="./images/slider/slider_1_tablet.png"
+          alt="Pasta"
+          width="292"
+          height="292"
+          loading="lazy"
+        />
+      </picture>
+      <picture class="slider__item">
+        <source
+          class="slider__image"
+          srcset="
+            ./images/slider/slider_2_tablet.webp      292w,
+            ./images/slider/slider_2_tablet@2x.webp   584w,
+            ./images/slider/slider_2_desktop.webp     528w,
+            ./images/slider/slider_2_desktop@2x.webp 1056w
+          "
+          sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+          type="image/webp"
+        />
+        <source
+          class="slider__image"
+          srcset="
+            ./images/slider/slider_2_tablet.png      292w,
+            ./images/slider/slider_2_tablet@2x.png   584w,
+            ./images/slider/slider_2_desktop.png     528w,
+            ./images/slider/slider_2_desktop@2x.png 1056w
+          "
+          sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+          type="image/png"
+        />
+        <img
+          src="./images/slider/slider_2_tablet.png"
+          alt="Pasta"
+          width="292"
+          height="292"
+          loading="lazy"
+        />
+      </picture>
+      <picture class="slider__item">
+        <source
+          class="slider__image"
+          srcset="
+            ./images/slider/slider_3_tablet.webp      292w,
+            ./images/slider/slider_3_tablet@2x.webp   584w,
+            ./images/slider/slider_3_desktop.webp     528w,
+            ./images/slider/slider_3_desktop@2x.webp 1056w
+          "
+          sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+          type="image/webp"
+        />
+        <source
+          class="slider__image"
+          srcset="
+            ./images/slider/slider_3_tablet.png      292w,
+            ./images/slider/slider_3_tablet@2x.png   584w,
+            ./images/slider/slider_3_desktop.png     528w,
+            ./images/slider/slider_3_desktop@2x.png 1056w
+          "
+          sizes="(min-width: 1280px) 528px, (min-width: 768px) 292px, 100vw"
+          type="image/png"
+        />
+        <img
+          src="./images/slider/slider_3_tablet.png"
+          alt="Pasta"
+          width="292"
+          height="292"
+          loading="lazy"
+        />
+      </picture>
+    </div>
+  </div>
+</section>

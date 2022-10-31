@@ -86,8 +86,8 @@
     font-size: 14px;
     line-height: 1.14;
     text-decoration: none;
-
     color: var(--scnd-text);
+    @include animated(color);
     &:hover,
     &:focus,
     &:active {
@@ -115,6 +115,11 @@
     background-color: var(--accent);
     color: var(--prim-text);
     cursor: pointer;
+    @include animated;
+    &:hover,
+    &:focus {
+      background-color: var(--btn-bcgd-focus);
+    }
   }
 }
 

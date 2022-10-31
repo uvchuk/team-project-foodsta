@@ -14,8 +14,19 @@
     <link rel="stylesheet" href="./sass/index.scss" />
     <script type="module" src="./index.js"></script>
   </head>
-  <body>
+  <body data-body-lock>
     <include src="./partials/header.html"></include>
-    <include src="./partials/hero.html"></include>
+    <main>
+      <include src="./partials/hero.html"></include>
+    </main>
+    <script
+      type="module"
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script type="module" src="./js/menu.js"></script>
+    <script type="module" src="./js/slick.min.js"></script>
+    <script type="module" src="./js/slick.js"></script>
   </body>
 </html>
