@@ -1,0 +1,74 @@
+.hero__container {
+  @extend %container;
+  display: flex;
+  align-items: center;
+
+  @include mobile {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+
+  @include tablet {
+    padding-top: 60px;
+  }
+  @include desktop {
+    padding-top: 159px;
+  }
+}
+.hero__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.18;
+  margin: 0 auto;
+  margin-bottom: 28px;
+
+  @include tablet {
+    font-weight: 700;
+    font-size: 42px;
+    line-height: 1.19;
+    width: 481px;
+    margin-bottom: 28px;
+  }
+  @include desktop {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 1.21;
+    width: 502px;
+  }
+}
+
+.hero__text {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+
+  @include tablet {
+    font-size: 16px;
+    max-width: 336px;
+    margin-bottom: 40px;
+  }
+  @include desktop {
+    font-size: 16px;
+    max-width: 502px;
+    margin-bottom: 40px;
+  }
+}
+
+.hero__btn {
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 1.54;
+  color: var(--prim-text);
+  width: 98px;
+  height: 32px;
+  background: var(--accent);
+  border-radius: 30px;
+  border-color: transparent;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: var(--btn-bcgd-focus);
+  }
+}
