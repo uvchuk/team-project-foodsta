@@ -306,8 +306,8 @@ a {
   line-height: 1.2;
   margin-bottom: 20px;
 }
-.backdrop .form:not(:last-child) {
-  margin-bottom: 30px;
+.backdrop .form__field:nth-child(-n+2) {
+  margin-bottom: 24px;
 }
 .backdrop .form__field {
   display: flex;
@@ -324,6 +324,7 @@ a {
 .backdrop .form__field input {
   font-size: 16px;
   line-height: 1.07;
+  outline: none;
   width: 100%;
   padding-top: 14px;
   padding-left: 12px;
@@ -342,7 +343,7 @@ a {
   font-size: 13px;
   line-height: 1.5;
   padding: 10px 38px;
-  margin-top: 8px;
+  margin-top: 32px;
   background-color: var(--tert-bcgd);
   border: 2px solid #7EB101;
   border-radius: 30px;
