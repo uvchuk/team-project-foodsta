@@ -52,7 +52,7 @@
             width: 526px;
         }
 
-        @media screen and (max-width: 1200px) {
+        @media screen and (max-width: 1280px) {
             margin-top: 60px;
         }
 
@@ -116,6 +116,7 @@
 
     &__svg {
         fill: currentColor;
+        margin-left: 4px;
     }
 }
 
@@ -169,10 +170,14 @@
         @include tablet {
            margin-left: 116px;
         }
+
+        @include tablet {
+            margin-left: 67px;
+        }
     }
 
     &__item::before {
-        content: '';
+        content: '';  
         display: inline-block;
         width: 48px;
         height: 48px;
