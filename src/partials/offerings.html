@@ -10,32 +10,52 @@
 </head>
 <body>
     <section class="offerings">
-        <div class="container">
-            <img class="offerings__img" src="" alt="Apple">
-            <h1 class="offerings__title">What’s Special About Our Offerings</h1>
-            <p class="offerings__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-                eros elementum tristique. Duis
-                cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
-            <ul class="features-list">
-                <li class="features-list__item">
-                    <h3 class="features-list__title">Fasest Delivery</h3>
-                    <p class="features-list__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                        enim in eros.</p>
-                </li>
-                <li class="features-list__item">
-                    <h3 class="features-list__title">Easy To Order</h3>
-                    <p class="features-list__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
-                        enim in eros.</p>
-                </li>
-            </ul>
-            <button type="button" class="offerings__btn">Order Now</button>
-            <a href="#" class="offerings__link">
-                Read More
-                <!-- <svg class="offerings__arrow-icon" width="14" height="14">
-                    <use href="../images/svg/arrow.svg"></use>
-                </svg> -->
-            </a>
-        </div>
+            <div class="offerings__img-wrap">
+                <picture>
+                    <source srcset="
+                                    ../images/apple-desktop.png 1x,
+                                    ../images/apple-desktop-2x.png 2x" media="(min-width: 1280px)">
+                    <source srcset="
+                                    ../images/apple-tablet.png 1x,
+                                    ../images/apple-tablet-2x.png 2x" media="(min-width: 768px)">
+                    <source srcset="
+                                    ../images/apple-mob.png 1x,
+                                    ../images/apple-mob-2x.png 2x" media="(max-width: 768px)">
+                    <img src="../images/apple-mob.png" alt="Apple">
+                </picture>
+            </div>
+            <div class="offerings__info">
+                <h1 class="offerings__title">What’s Special About Our Offerings</h1>
+                <p class="offerings__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
+                    eros elementum tristique. Duis
+                    cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                <ul class="features-list">
+                    <li class="features-list__item">
+                        <h3 class="features-list__title">Fasest Delivery</h3>
+                        <p class="features-list__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                            enim in eros.</p>
+                    </li>
+                    <li class="features-list__item">
+                        <h3 class="features-list__title">Easy To Order</h3>
+                        <p class="features-list__descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                            enim in eros.</p>
+                    </li>
+                </ul>
+                <div class="offerings__click-items">
+                    <button type="button" class="offerings__btn">Order Now</button>
+                    <a href="#" class="offerings__link">
+                        Read More
+                        <svg class="offerings__svg" xmlns="http://www.w3.org/2000/svg" width="15" height="14" fill="none">
+                            <path fill-rule="evenodd"
+                                d="M9.595 6.873a.395.395 0 0 1 0 .558L5.567 11.46a.395.395 0 0 1-.559 0l-.186-.186a.395.395 0 0 1 0-.56l3.562-3.561L4.822 3.59a.395.395 0 0 1 0-.559l.186-.186a.395.395 0 0 1 .56 0l4.027 4.028Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                        <!-- <svg class="" width="14" height="13">
+                            <use href="../images/svg/arrow.svg"></use>
+                        </svg> -->
+                    </a>
+                </div>
+            </div>
     </section>
 </body>
 </html>

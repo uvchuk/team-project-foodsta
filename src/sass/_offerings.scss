@@ -1,35 +1,79 @@
 .offerings {
     padding-bottom: 60px;
-    background-image: url('');
+    background-image: url('../images/background1-mob.png');
     background-repeat: no-repeat;
     background-size: cover;
     @extend %container;
 
+    @include retina {
+        background-image: url('../images/background1-mob-2x.png');
+    }
+
+    @media screen and (max-width: 767px) {
+        max-width: 440px;
+    }
+    
     @include tablet {
         padding-bottom: 100px;
-        // background-image: url();
+        padding-top: 150px;
+        background-image: url(../images/background1-tablet.png);
+
+        @include retina {
+            background-image: url('../images/background1-tablet-2x.png');
+        }
     }
 
-    @include tablet {
+    @include desktop {
         padding-bottom: 43px;
-        // background-image: url();
+        padding-top: 177px;
+        background-image: url('../images/background1-desktop.png');
+        display: flex;
+        align-items: center;
+
+        @include retina {
+            background-image: url('../images/background1-desktop-2x.png');
+        }
     }
 
-    &__img {
-        width: 280px;
-        margin-left: auto;
-        margin-right: auto;
+    &__img-wrap {
+        @include desktop{
+            width: 550px;
+            margin-right: 90px;
+        }
     }
     
     &__title {
-        margin-top: 60px;
-    
         font-size: 28px;
         line-height: 1.18;
+
+        @include tablet {
+            font-size: 42px;
+            line-height: 1.17;
+            width: 526px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            margin-top: 60px;
+        }
+
+        @include desktop {
+            line-height: 1.2;
+        }
     }
 
     &__descr {
         margin-top: 28px;
+
+        @include tablet {
+            font-size: 16px;
+            line-height: 1.19;
+            width: 500px;
+            margin-top: 20px;
+        }
+
+        @include desktop {
+            line-height: 1.5;
+        }
     }
 
     &__btn {
@@ -45,13 +89,33 @@
         line-height: 1.5;
         @include animated(border-color);
     
-        &:hover {
+        &:hover, &:focus {
             border-color: var(--border-focus);
         }
-        
-        // &__arrow-icon {
-        //     fill: currentColor;
-        // }
+    }
+
+    &__click-items {
+        display: flex;
+        align-items: center;
+    }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include animated(color);
+
+        @include desktop {
+            display: none;
+        }
+
+        &:hover, &:focus {
+            color: var(--border-focus);
+        }
+    }
+
+    &__svg {
+        fill: currentColor;
     }
 }
 
@@ -59,17 +123,52 @@
     margin-top: 28px;
     margin-bottom: 28px;
 
+    @include tablet {
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 40px;
+
+    }
+
+    @include desktop {
+        margin-bottom: 32px;
+
+    }
+
     &__title {
         font-size: 18px;
         line-height: 1.17;
+
+        @include desktop {
+            line-height: 1.4;
+        }
     }
 
     &__descr {
         margin-top: 16px;
+
+        @include desktop {
+            line-height: 1.5;
+        }
     }
 
-    &__item:not(:first-child) {
-        margin-top: 28px;
+    @media screen and (max-width: 767px) {
+
+        &__item:not(:first-child) {
+            margin-top: 28px;
+        }
+    }
+
+    &__item {
+       @include tablet {
+            width: 252px;
+       }
+    }
+
+    &__item:nth-child(2n) {
+        @include tablet {
+           margin-left: 116px;
+        }
     }
 
     &__item::before {
