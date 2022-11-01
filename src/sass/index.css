@@ -1,6 +1,6 @@
 @import '~node_modules/modern-normalize/modern-normalize.css';
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -57,26 +57,34 @@ a {
   --box-shadow-header: 0px 4px 24px rgba(105, 105, 105, 0.1);
 }
 
-.offerings, .hero__container, .page-header__container {
+.offerings,
+.hero__container,
+.page-header__container {
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (max-width: 767px) {
-  .offerings, .hero__container, .page-header__container {
+  .offerings,
+  .hero__container,
+  .page-header__container {
     padding-left: 20px;
     padding-right: 20px;
     max-width: 480px;
   }
 }
 @media screen and (min-width: 768px) {
-  .offerings, .hero__container, .page-header__container {
+  .offerings,
+  .hero__container,
+  .page-header__container {
     padding-left: 32px;
     padding-right: 32px;
     width: 768px;
   }
 }
 @media screen and (min-width: 1280px) {
-  .offerings, .hero__container, .page-header__container {
+  .offerings,
+  .hero__container,
+  .page-header__container {
     padding-left: 16px;
     padding-right: 16px;
     width: 1280px;
@@ -179,9 +187,11 @@ a {
     text-decoration: none;
     color: var(--scnd-text);
   }
-  .menu__link:hover, .menu__link:focus, .menu__link:active {
+  .menu__link:hover,
+  .menu__link:focus,
+  .menu__link:active {
     -webkit-text-decoration-line: underline;
-            text-decoration-line: underline;
+    text-decoration-line: underline;
     color: var(--accent);
   }
 }
@@ -240,7 +250,9 @@ a {
     display: inline-block;
   }
 }
-.page-header__btn-open:hover, .page-header__btn-open:focus, .page-header__btn-open:active {
+.page-header__btn-open:hover,
+.page-header__btn-open:focus,
+.page-header__btn-open:active {
   fill: var(--accent-scnd);
 }
 @media screen and (min-width: 768px) {
@@ -332,20 +344,24 @@ a {
   cursor: pointer;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero__btn:hover, .hero__btn:focus {
+.hero__btn:hover,
+.hero__btn:focus {
   background-color: var(--btn-bcgd-focus);
 }
 
 .offerings {
   padding-top: 41px;
   padding-bottom: 60px;
-  background-image: url("../images/background1-mob.png");
+  background-image: url('../images/background1-mob.png');
   background-repeat: no-repeat;
   background-size: cover;
 }
-@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+@media (min-device-pixel-ratio: 2),
+  (-webkit-min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
   .offerings {
-    background-image: url("../images/background1-mob-2x.png");
+    background-image: url('../images/background1-mob-2x.png');
   }
 }
 @media screen and (min-width: 768px) {
@@ -355,23 +371,29 @@ a {
     background-image: url(../images/background1-tablet.png);
   }
 }
-@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 768px) and (min-resolution: 192dpi),
+  screen and (min-width: 768px) and (min-resolution: 2dppx) {
   .offerings {
-    background-image: url("../images/background1-tablet-2x.png");
+    background-image: url('../images/background1-tablet-2x.png');
   }
 }
 @media screen and (min-width: 1280px) {
   .offerings {
     padding-bottom: 43px;
     padding-top: 177px;
-    background-image: url("../images/background1-desktop.png");
+    background-image: url('../images/background1-desktop.png');
     display: flex;
     align-items: center;
   }
 }
-@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2),
+  screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2),
+  screen and (min-width: 1280px) and (min-resolution: 192dpi),
+  screen and (min-width: 1280px) and (min-resolution: 2dppx) {
   .offerings {
-    background-image: url("../images/background1-desktop-2x.png");
+    background-image: url('../images/background1-desktop-2x.png');
   }
 }
 @media screen and (min-width: 1280px) {
@@ -428,7 +450,8 @@ a {
   line-height: 1.5;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.offerings__btn:hover, .offerings__btn:focus {
+.offerings__btn:hover,
+.offerings__btn:focus {
   border-color: var(--border-focus);
   cursor: pointer;
 }
@@ -448,7 +471,8 @@ a {
     display: none;
   }
 }
-.offerings__link:hover, .offerings__link:focus {
+.offerings__link:hover,
+.offerings__link:focus {
   color: var(--border-focus);
   cursor: pointer;
 }
@@ -511,7 +535,7 @@ a {
   }
 }
 .features-list__item::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 48px;
   height: 48px;
@@ -526,4 +550,4 @@ a {
 }
 .features-list__item:nth-child(2)::before {
   background-image: url(../images/svg/touch.svg);
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
