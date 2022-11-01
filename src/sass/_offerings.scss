@@ -5,43 +5,52 @@
   @include desktop {
     margin-top: -160px;
   }
-  padding-top: 41px;
-  padding-bottom: 60px;
-  background-image: url('../images/background1-mob.png');
-  background-repeat: no-repeat;
-  background-size: cover;
-  @extend %container;
 
-  @include retina {
-    background-image: url('../images/background1-mob-2x.png');
-  }
-
-  @include tablet {
-    padding-bottom: 100px;
-    padding-top: 150px;
-    background-image: url(../images/background1-tablet.png);
+  &__container {
+    @extend %container;
+    padding-top: 41px;
+    padding-bottom: 60px;
+    background-image: url('../images/background1-mob.png');
+    background-repeat: no-repeat;
+    background-size: cover;
 
     @include retina {
-      background-image: url('../images/background1-tablet-2x.png');
+      background-image: url('../images/background1-mob-2x.png');
     }
-  }
 
-  @include desktop {
-    padding-bottom: 43px;
-    padding-top: 177px;
-    background-image: url('../images/background1-desktop.png');
-    display: flex;
-    align-items: center;
+    @include tablet {
+      padding-bottom: 100px;
+      padding-top: 150px;
+      background-image: url(../images/background1-tablet.png);
 
-    @include retina {
-      background-image: url('../images/background1-desktop-2x.png');
+      @include retina {
+        background-image: url('../images/background1-tablet-2x.png');
+      }
+    }
+
+    @include desktop {
+      padding-bottom: 43px;
+      padding-top: 177px;
+      display: flex;
+      align-items: center;
+      background-image: url('../images/background1-desktop.png');
+
+      @include retina {
+        background-image: url('../images/background1-desktop-2x.png');
+      }
     }
   }
 
   &__img-wrap {
     @include desktop {
-      width: 550px;
+      flex-basis: 550px;
       margin-right: 90px;
+    }
+  }
+
+  &__info {
+    @include desktop {
+      flex-grow: 1;
     }
   }
 
@@ -55,7 +64,7 @@
       width: 526px;
     }
 
-    @media screen and (max-width: 1280px) {
+    @media screen and (max-width: 1279px) {
       margin-top: 60px;
     }
 
@@ -81,7 +90,6 @@
 
   &__btn {
     padding: 8px 20px;
-    margin-right: 24px;
 
     background-color: var(--tert-bcgd);
     border: 2px solid var(--border-color);
@@ -91,6 +99,10 @@
     font-size: 13px;
     line-height: 1.5;
     @include animated(border-color);
+
+    @media screen and (max-width: 1279px) {
+      margin-right: 24px;
+    }
 
     &:hover,
     &:focus {
@@ -168,6 +180,10 @@
   &__item {
     @include tablet {
       width: 252px;
+    }
+
+    @include desktop {
+      flex-basis: 252px;
     }
   }
 
