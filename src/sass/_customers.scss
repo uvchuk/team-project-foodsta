@@ -42,6 +42,32 @@
     line-height: 1.18;
   }
 
+  &__avatar--man {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__avatar--man::before {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    content: '';
+    background-image: url(../images/customer1.png);
+  }
+
+  &__avatar--girl {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__avatar--girl::before {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    content: '';
+    background-image: url(../images/customer2.png);
+  }
+
   &__avatar-name {
     font-weight: 500;
     font-size: 14px;
@@ -60,11 +86,11 @@
     border-right: 0.854167px solid #7eb101;
   }
 
-  &__avatar-info::before {
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    content: '';
-    background-image: url(../images/customer1.png);
-  }
+  // &__avatar-info::before {
+  //   display: inline-block;
+  //   width: 48px;
+  //   height: 48px;
+  //   content: '';
+  //   background-image: url(../images/customer1.png);
+  // }
 }
