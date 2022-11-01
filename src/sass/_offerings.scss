@@ -1,198 +1,200 @@
 .offerings {
-    padding-top: 41px;
-    padding-bottom: 60px;
-    background-image: url('../images/background1-mob.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    @extend %container;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-top: -32px;
+  }
+  padding-top: 41px;
+  padding-bottom: 60px;
+  background-image: url('../images/background1-mob.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  @extend %container;
+
+  @include retina {
+    background-image: url('../images/background1-mob-2x.png');
+  }
+
+  @include tablet {
+    padding-bottom: 100px;
+    padding-top: 150px;
+    background-image: url(../images/background1-tablet.png);
 
     @include retina {
-        background-image: url('../images/background1-mob-2x.png');
+      background-image: url('../images/background1-tablet-2x.png');
     }
-    
-    @include tablet {
-        padding-bottom: 100px;
-        padding-top: 150px;
-        background-image: url(../images/background1-tablet.png);
+  }
 
-        @include retina {
-            background-image: url('../images/background1-tablet-2x.png');
-        }
+  @include desktop {
+    padding-bottom: 43px;
+    padding-top: 177px;
+    background-image: url('../images/background1-desktop.png');
+    display: flex;
+    align-items: center;
+
+    @include retina {
+      background-image: url('../images/background1-desktop-2x.png');
+    }
+  }
+
+  &__img-wrap {
+    @include desktop {
+      width: 550px;
+      margin-right: 90px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    line-height: 1.18;
+
+    @include tablet {
+      font-size: 42px;
+      line-height: 1.17;
+      width: 526px;
+    }
+
+    @media screen and (max-width: 1280px) {
+      margin-top: 60px;
     }
 
     @include desktop {
-        padding-bottom: 43px;
-        padding-top: 177px;
-        background-image: url('../images/background1-desktop.png');
-        display: flex;
-        align-items: center;
+      line-height: 1.2;
+    }
+  }
 
-        @include retina {
-            background-image: url('../images/background1-desktop-2x.png');
-        }
+  &__descr {
+    margin-top: 28px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.19;
+      width: 500px;
+      margin-top: 20px;
     }
 
-    &__img-wrap {
-        @include desktop{
-            width: 550px;
-            margin-right: 90px;
-        }
+    @include desktop {
+      line-height: 1.5;
     }
-    
-    &__title {
-        font-size: 28px;
-        line-height: 1.18;
+  }
 
-        @include tablet {
-            font-size: 42px;
-            line-height: 1.17;
-            width: 526px;
-        }
+  &__btn {
+    padding: 8px 20px;
+    margin-right: 24px;
 
-        @media screen and (max-width: 1280px) {
-            margin-top: 60px;
-        }
+    background-color: var(--tert-bcgd);
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
 
-        @include desktop {
-            line-height: 1.2;
-        }
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+    @include animated(border-color);
+
+    &:hover,
+    &:focus {
+      border-color: var(--border-focus);
+      cursor: pointer;
     }
+  }
 
-    &__descr {
-        margin-top: 28px;
+  &__click-items {
+    display: flex;
+    align-items: center;
+  }
 
-        @include tablet {
-            font-size: 16px;
-            line-height: 1.19;
-            width: 500px;
-            margin-top: 20px;
-        }
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+    @include animated(color);
 
-        @include desktop {
-            line-height: 1.5;
-        }
-    }
-
-    &__btn {
-        padding: 8px 20px;
-        margin-right: 24px;
-    
-        background-color: var(--tert-bcgd);
-        border: 2px solid var(--border-color);
-        border-radius: 30px;
-    
-        font-weight: 500;
-        font-size: 13px;
-        line-height: 1.5;
-        @include animated(border-color);
-    
-        &:hover, &:focus {
-            border-color: var(--border-focus);
-            cursor: pointer;
-        }
+    @include desktop {
+      display: none;
     }
 
-    &__click-items {
-        display: flex;
-        align-items: center;
+    &:hover,
+    &:focus {
+      color: var(--border-focus);
+      cursor: pointer;
     }
+  }
 
-    &__link {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        line-height: 1.5;
-        @include animated(color);
-
-        @include desktop {
-            display: none;
-        }
-
-        &:hover, &:focus {
-            color: var(--border-focus);
-            cursor: pointer;
-        }
-    }
-
-    &__svg {
-        fill: currentColor;
-        margin-left: 4px;
-    }
+  &__svg {
+    fill: currentColor;
+    margin-left: 4px;
+  }
 }
 
 .features-list {
-    margin-top: 28px;
-    margin-bottom: 28px;
+  margin-top: 28px;
+  margin-bottom: 28px;
 
+  @include tablet {
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  @include desktop {
+    margin-bottom: 32px;
+  }
+
+  &__title {
+    font-size: 18px;
+    line-height: 1.17;
+
+    @include desktop {
+      line-height: 1.4;
+    }
+  }
+
+  &__descr {
+    margin-top: 16px;
+
+    @include desktop {
+      line-height: 1.5;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    &__item:not(:first-child) {
+      margin-top: 28px;
+    }
+  }
+
+  &__item {
     @include tablet {
-        display: flex;
-        margin-top: 40px;
-        margin-bottom: 40px;
+      width: 252px;
+    }
+  }
 
+  &__item:nth-child(2n) {
+    @include tablet {
+      margin-left: 116px;
     }
 
     @include desktop {
-        margin-bottom: 32px;
-
+      margin-left: 67px;
     }
+  }
 
-    &__title {
-        font-size: 18px;
-        line-height: 1.17;
+  &__item::before {
+    content: '';
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background-color: var(--tert-bcgd);
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    background-position: center;
+    margin-bottom: 8px;
+  }
 
-        @include desktop {
-            line-height: 1.4;
-        }
-    }
+  &__item:first-child::before {
+    background-image: url(../images/svg/rocket.svg);
+  }
 
-    &__descr {
-        margin-top: 16px;
-
-        @include desktop {
-            line-height: 1.5;
-        }
-    }
-
-    @media screen and (max-width: 767px) {
-
-        &__item:not(:first-child) {
-            margin-top: 28px;
-        }
-    }
-
-    &__item {
-       @include tablet {
-            width: 252px;
-       }
-    }
-
-    &__item:nth-child(2n) {
-        @include tablet {
-           margin-left: 116px;
-        }
-
-        @include desktop {
-            margin-left: 67px;
-        }
-    }
-
-    &__item::before {
-        content: '';  
-        display: inline-block;
-        width: 48px;
-        height: 48px;
-        background-color: var(--tert-bcgd);
-        background-repeat: no-repeat;
-        border-radius: 50%;
-        background-position: center;
-        margin-bottom: 8px;
-    }
-
-    &__item:first-child::before {
-        background-image: url(../images/svg/rocket.svg);
-    }
-
-    &__item:nth-child(2)::before {
-        background-image: url(../images/svg/touch.svg);
-    }
+  &__item:nth-child(2)::before {
+    background-image: url(../images/svg/touch.svg);
+  }
 }
