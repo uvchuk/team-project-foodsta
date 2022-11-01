@@ -3,13 +3,13 @@
   @include mobile {
     display: none;
   }
+  @include tablet {
+    top: 149px;
+    left: 408px;
+  }
   @include desktop {
     top: 14px;
     left: 670px;
-  }
-  @include tablet {
-    bottom: 0;
-    left: 408px;
   }
 }
 
@@ -20,15 +20,15 @@
 .slick-list {
   overflow: hidden;
   border-radius: 50%;
-  @include desktop {
-    width: 580px;
-    height: 580px;
-    border: 26px solid var(--accent-scnd);
-  }
   @include tablet {
     width: 320px;
     height: 320px;
     border: 14px solid var(--accent-scnd);
+  }
+  @include desktop {
+    width: 580px;
+    height: 580px;
+    border: 26px solid var(--accent-scnd);
   }
 }
 
@@ -39,13 +39,13 @@
 }
 
 .slider__item img {
-  @include desktop {
-    width: 528px;
-    height: 528px;
-  }
   @include tablet {
     width: 292px;
     height: 292px;
+  }
+  @include desktop {
+    width: 528px;
+    height: 528px;
   }
 }
 
@@ -53,7 +53,7 @@
   position: absolute;
   top: 50%;
   padding: 0;
-  z-index: 1;
+  z-index: 2;
   border: none;
   cursor: pointer;
   font-size: 0;
