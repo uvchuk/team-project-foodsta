@@ -3,7 +3,7 @@
   const menuOpen = document.querySelector('[data-menu-open]');
   const menuClose = document.querySelector('[data-menu-close]');
   const bodyLock = document.querySelector('[data-body-lock]');
-  const closebyLink = document.querySelector('.menu__link');
+  const closebyLink = document.querySelectorAll('.menu__link');
 
   const toggleMenu = () => {
     const isMenuOpen =
@@ -14,9 +14,16 @@
     bodyLock.classList.toggle('locked');
   };
 
+  const closeMenu = () => {
+    mobileMenu.classList.remove('is-open');
+    menuOpen.classList.remove('is-open');
+    bodyLock.classList.remove('locked');
+    menuOpen.setAttribute('aria-expanded', false);
+  };
+
   menuOpen.addEventListener('click', toggleMenu);
   menuClose.addEventListener('click', toggleMenu);
-  closebyLink.addEventListener('click', toggleMenu);
+  closebyLink.forEach(b => b.addEventListener('click', closeMenu));
 
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
