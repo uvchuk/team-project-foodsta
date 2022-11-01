@@ -55,7 +55,7 @@
 
         fill: var(--prim-text);
 
-        @include animated;
+        @include animated(fill);
     }
 
     & .btn-close__icon:hover,
@@ -106,11 +106,20 @@
             padding-left: 12px;
             padding-bottom: 14px;
 
-            border: 1px solid #7EB101;
+            border: 1px solid rgba(18, 18, 18, 0.12);
             box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
             border-radius: 30px;
+            @include animated(--border-color);
 
-            color: var(--placeholder);
+            &:hover,
+            &:focus,
+            &:active {
+                border-color: var(--border-color);
+            }
+
+            &::placeholder {
+                color: var(--placeholder);
+            }
 
         }
     }

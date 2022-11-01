@@ -294,7 +294,7 @@ a {
 .backdrop .btn-close__icon {
   display: block;
   fill: var(--prim-text);
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop .btn-close__icon:hover, .backdrop .btn-close__icon:focus {
   fill: var(--accent);
@@ -329,9 +329,21 @@ a {
   padding-top: 14px;
   padding-left: 12px;
   padding-bottom: 14px;
-  border: 1px solid #7EB101;
+  border: 1px solid rgba(18, 18, 18, 0.12);
   box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
   border-radius: 30px;
+  transition: --border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop .form__field input:hover, .backdrop .form__field input:focus, .backdrop .form__field input:active {
+  border-color: var(--border-color);
+}
+.backdrop .form__field input::-moz-placeholder {
+  color: var(--placeholder);
+}
+.backdrop .form__field input:-ms-input-placeholder {
+  color: var(--placeholder);
+}
+.backdrop .form__field input::placeholder {
   color: var(--placeholder);
 }
 .backdrop .btn-send {
