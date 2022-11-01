@@ -136,6 +136,10 @@
             border: 0.854167px solid var(--accent);
         }
 
+        @include mobile {
+            margin-bottom: 20px;
+        }
+
         @include tablet {
             width: 279px;
         }
