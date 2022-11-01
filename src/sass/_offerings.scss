@@ -2,7 +2,10 @@
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     margin-top: -32px;
   }
-  
+  @include desktop {
+    margin-top: -160px;
+  }
+
   &__container {
     @extend %container;
     padding-top: 41px;
@@ -21,7 +24,7 @@
       background-image: url(../images/background1-tablet.png);
 
       @include retina {
-        background-image: url('../images/background1-tablet-2x.png')
+        background-image: url('../images/background1-tablet-2x.png');
       }
     }
 
@@ -31,13 +34,13 @@
       display: flex;
       align-items: center;
       background-image: url('../images/background1-desktop.png');
-      
+
       @include retina {
         background-image: url('../images/background1-desktop-2x.png');
       }
     }
   }
-  
+
   &__img-wrap {
     @include desktop {
       flex-basis: 550px;
@@ -97,7 +100,7 @@
     line-height: 1.5;
     @include animated(border-color);
 
-    @media screen and (max-width: 1279px){
+    @media screen and (max-width: 1279px) {
       margin-right: 24px;
     }
 
