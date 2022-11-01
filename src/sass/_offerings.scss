@@ -2,6 +2,9 @@
   @media screen and (min-width: 768px) and (max-width: 1279px) {
     margin-top: -32px;
   }
+  @include desktop {
+    margin-top: -160px;
+  }
   padding-top: 41px;
   padding-bottom: 60px;
   background-image: url('../images/background1-mob.png');
