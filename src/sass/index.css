@@ -343,12 +343,6 @@ a {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-@media screen and (min-width: 768px) {
-  .footer .container {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-}
 @media screen and (max-width: 767px) {
   .footer .container {
     background-size: 100% 100%;
@@ -362,6 +356,8 @@ a {
 }
 @media screen and (min-width: 768px) {
   .footer .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
     background-image: url(../images/footer-tablet.png);
   }
 }
@@ -427,13 +423,13 @@ a {
 }
 
 .footer-nav {
-  margin-right: 100px;
+  margin-right: 80px;
 }
 @media screen and (min-width: 768px) {
   .footer-nav {
     display: flex;
     gap: 28px;
-    margin-right: 230px;
+    margin-right: 200px;
   }
 }
 @media screen and (min-width: 1280px) {
@@ -452,6 +448,13 @@ a {
 }
 .footer-nav__link {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .footer-nav__link {
+    display: inline-block;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
 }
 .footer-nav__link:hover, .footer-nav__link:focus {
   -webkit-text-decoration-line: underline;
@@ -473,6 +476,7 @@ a {
   }
 }
 .footer-form__wrapper {
+  margin-top: 12px;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px) {
@@ -484,7 +488,6 @@ a {
   font-weight: 500;
   line-height: 1.5;
   color: var(--prim-text);
-  margin-bottom: 12px;
 }
 .footer-form__input {
   width: 100%;
@@ -515,6 +518,7 @@ a {
 .footer-form__btn {
   display: block;
   margin-left: auto;
+  cursor: pointer;
   font-family: inherit;
   font-weight: 500;
   font-size: 13px;

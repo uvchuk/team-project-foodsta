@@ -7,11 +7,6 @@
 
     background-repeat: no-repeat;
     background-size: 100%;
-
-    @include tablet {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
     
          @include mobile {
             background-size: 100% 100%;
@@ -24,6 +19,9 @@
          }
     
          @include tablet {
+            padding-top: 100px;
+            padding-bottom: 100px;
+
              background-image: url(../images/footer-tablet.png);
     
              @include retina {
@@ -88,12 +86,12 @@
 }
 
 .footer-nav {
-    margin-right: 100px;
+    margin-right: 80px;
 
     @include tablet {
         display: flex;
         gap: 28px;
-        margin-right: 230px;
+        margin-right: 200px;
     }
 
     @include desktop {
@@ -113,6 +111,12 @@
     }
     &__link {
         @include animated;
+        
+        @include tablet {
+            display: inline-block;
+                padding-top: 18px;
+                padding-bottom: 18px;
+        }
     }
 
     &__link:hover,
@@ -134,6 +138,7 @@
     }
 
     &__wrapper {
+        margin-top: 12px;
         margin-bottom: 20px;
 
         @include tablet {
@@ -145,8 +150,6 @@
         font-weight: 500;
         line-height: 1.5;
         color: var(--prim-text);
-    
-        margin-bottom: 12px;
     }
 
     &__input {
@@ -183,6 +186,7 @@
     &__btn {
         display: block;
         margin-left: auto;
+        cursor: pointer;
 
         font-family: inherit;
         font-weight: 500;
@@ -242,6 +246,5 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // margin-bottom: 100px;
     }
 }
