@@ -1,0 +1,159 @@
+.customers-say {
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../images/background2-mob.png');
+    @extend %container;
+
+    @include retina {
+      background-image: url('../images/background2-mob-2x.png');
+    }
+
+    @include tablet {
+      padding-bottom: 120px;
+      background-image: url('../images/background2-tablet.png');
+      @include retina {
+        background-image: url('../images/background2-tablet-2x.png');
+      }
+    }
+
+    @include desktop {
+      padding-top: 100px;
+      padding-bottom: 200px;
+      background-image: url('../images/background2-desktop.png');
+      @include retina {
+        background-image: url('../images/background2-desktop-2x.png');
+      }
+    }
+  }
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    color: var(--prim-text);
+    margin-bottom: 20px;
+
+    @include tablet {
+      font-size: 42px;
+      line-height: 1.16;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+
+    @include tablet {
+      font-size: 16px;
+      line-height: 1.18;
+    }
+  }
+
+  &__list {
+    @include tablet {
+      display: flex;
+      align-items: baseline;
+    }
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__item {
+    padding: 8px;
+    border-radius: 0px 30px 30px 30px;
+    background-color: var(--tert-bcgd);
+
+    @include tablet {
+      padding: 12px;
+    }
+
+    @include desktop {
+      width: 500px;
+      padding: 14px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 24px;
+
+    @include tablet {
+      margin-bottom: 0;
+      margin-right: 32px;
+    }
+
+    @include desktop {
+      margin-right: 139px;
+    }
+  }
+
+  &__comment {
+    margin-top: 28px;
+    margin-bottom: 40px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.18;
+
+    @include tablet {
+      font-size: 18px;
+      line-height: 1.16;
+    }
+  }
+
+  &__avatar--man {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__avatar--man::before {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    content: '';
+    background-image: url('../images/customer1.png');
+
+    @include retina {
+      background-image: url('../images/customer1-2x.png');
+      background-size: contain;
+    }
+  }
+
+  &__avatar--girl {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  &__avatar--girl::before {
+    margin-right: 16px;
+    width: 48px;
+    height: 48px;
+    content: '';
+    background-image: url('../images/customer2.png');
+
+    @include retina {
+      background-image: url('../images/customer2-2x.png');
+      background-size: contain;
+    }
+  }
+
+  &__avatar-name {
+    margin-bottom: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+  }
+
+  &__avatar-status {
+    line-height: 150%;
+  }
+
+  &__avatar-info {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-right: 14px;
+    display: inline-block;
+    border-right: 0.854167px solid #7eb101;
+  }
+}
