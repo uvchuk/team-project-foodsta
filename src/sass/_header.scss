@@ -1,10 +1,11 @@
 .page-header {
   position: fixed;
   z-index: 3;
-  width: 100%;
+  width: 100vw;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  box-shadow: var(--box-shadow-header);
 }
 
 .page-header__container {
@@ -13,7 +14,6 @@
   align-items: center;
   border: transparent;
   background: var(--prim-bcgd);
-  box-shadow: var(--box-shadow-header);
   @include mobile {
     position: relative;
   }
