@@ -1,29 +1,33 @@
 .customers-say {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  background-image: url('../images/background2-mob.png');
-  @extend %container;
+  &__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url('../images/background2-mob.png');
+    @extend %container;
 
-  @include retina {
-    background-image: url('../images/background2-mob-2x.png');
-  }
-
-  @include tablet {
-    background-image: url('../images/background2-tablet.png');
     @include retina {
-      background-image: url('../images/background2-tablet-2x.png');
+      background-image: url('../images/background2-mob-2x.png');
+    }
+
+    @include tablet {
+      padding-bottom: 120px;
+      background-image: url('../images/background2-tablet.png');
+      @include retina {
+        background-image: url('../images/background2-tablet-2x.png');
+      }
+    }
+
+    @include desktop {
+      padding-top: 100px;
+      padding-bottom: 200px;
+      background-image: url('../images/background2-desktop.png');
+      @include retina {
+        background-image: url('../images/background2-desktop-2x.png');
+      }
     }
   }
-
-  @include desktop {
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-image: url('../images/background2-desktop.png');
-    @include retina {
-      background-image: url('../images/background2-desktop-2x.png');
-    }
-  }
-
   &__title {
     font-weight: 700;
     font-size: 28px;
@@ -67,6 +71,7 @@
     }
 
     @include desktop {
+      width: 500px;
       padding: 14px;
     }
   }
