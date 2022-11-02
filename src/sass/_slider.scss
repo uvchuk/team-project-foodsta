@@ -1,15 +1,16 @@
 .slider {
-  position: absolute;
   @include mobile {
     display: none;
   }
-  @include tablet {
-    top: 149px;
-    left: 408px;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    position: absolute;
+    top: 140px;
+    left: 400px;
+    padding: 8px;
   }
   @include desktop {
-    top: 14px;
-    left: 670px;
+    position: relative;
+    padding: 14px;
   }
 }
 
@@ -35,7 +36,6 @@
 .slick-track {
   display: flex;
   align-items: flex-start;
-  transition: all 1s;
 }
 
 .slider__item img {
@@ -52,19 +52,17 @@
 .slider .slick-arrow {
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   padding: 0;
-  z-index: 2;
   border: none;
   cursor: pointer;
   font-size: 0;
-  transition: all 1s;
+  transition: background 1s, opacity 1s;
   @include tablet {
-    margin: -20px -10px 0px -10px;
     width: 34px;
     height: 28px;
   }
   @include desktop {
-    margin: -30px -12px 0px -12px;
     width: 48px;
     height: 40px;
   }
