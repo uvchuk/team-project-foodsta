@@ -3,12 +3,50 @@
     
     padding-top: 60px;
     padding-bottom: 60px;
+    background-position: bottom;
 
-    @include tablet {
-        padding-top: 100px;
-        padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    
+         @include mobile {
+            background-size: 100% 100%;
+
+             background-image: url(../images/footer-mob.png);
+    
+             @include retina {
+                 background-image: url(../images/footer-mob-2x.png);
+             }
+         }
+    
+         @include tablet {
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+             background-image: url(../images/footer-tablet.png);
+    
+             @include retina {
+                 background-image: url(../images/footer-tablet-2x.png);
+             }
+         }
+    
+         @include desktop {
+             background-image: url(../images/footer-desktop.png);
+    
+             @include retina {
+                 background-image: url(../images/footer-desktop-2x.png);
+             }
+         }
+
+}
+
+.footer-start {
+    @include desktop {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        margin-bottom: 80px;
     }
-
 }
 
 .footer .logo {
@@ -17,31 +55,7 @@
 
 .footer {
     box-shadow: var(--box-shadow-header);
-    background-repeat: no-repeat;
-    background-size:cover;
-
-    @include mobile {
-        background-image: url(../images/footer-mob.png);
-        @include retina {
-            background-image: url(../images/footer-mob-2x.png);
-        }
-    }
-
-    @include tablet {
-        background-image: url(../images/footer-tablet.png);
-        @include retina {
-            background-image: url(../images/footer-tablet-2x.png);
-        }
-    }
-
-    @include desktop {
-        background-image: url(../images/footer-desktop.png);
-        @include retina {
-            background-image: url(../images/footer-desktop-2x.png);
-        }
-    }
-
-
+   
 
     &__box {
         display: flex;
@@ -51,6 +65,10 @@
         @include tablet {
             align-items: center;
         }
+
+        @include desktop {
+            margin-bottom: 0;
+        }
     }
 
     &__link {
@@ -58,18 +76,29 @@
         line-height: 1.2;
         text-decoration-line: underline;
         color: var(--border-color);
+
+        @include tablet {
+            font-size: 12px;
+            line-height: 1.17;
+        }
     } 
     
 }
 
 .footer-nav {
-    margin-right: 100px;
+    margin-right: 80px;
 
     @include tablet {
         display: flex;
         gap: 28px;
-        margin-right: 230px;
+        margin-right: 200px;
     }
+
+    @include desktop {
+        margin-right: 0;
+        margin-left: 148px;
+    }
+
 
     &__item {
         color: var(--scnd-text);
@@ -82,6 +111,12 @@
     }
     &__link {
         @include animated;
+        
+        @include tablet {
+            display: inline-block;
+                padding-top: 18px;
+                padding-bottom: 18px;
+        }
     }
 
     &__link:hover,
@@ -98,7 +133,12 @@
         margin-bottom: 100px; 
     }
 
+    @include desktop {
+        margin-bottom: 0;
+    }
+
     &__wrapper {
+        margin-top: 12px;
         margin-bottom: 20px;
 
         @include tablet {
@@ -110,8 +150,6 @@
         font-weight: 500;
         line-height: 1.5;
         color: var(--prim-text);
-    
-        margin-bottom: 12px;
     }
 
     &__input {
@@ -148,6 +186,7 @@
     &__btn {
         display: block;
         margin-left: auto;
+        cursor: pointer;
 
         font-family: inherit;
         font-weight: 500;
@@ -177,6 +216,11 @@
         font-size: 10px;
         line-height: 1.2;
         color: var(--prim-text);
+
+        @include tablet {
+        font-size: 12px;
+            line-height: 1.17;
+        }
     }
 }
 
@@ -202,6 +246,5 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        // margin-bottom: 100px;
     }
 }
