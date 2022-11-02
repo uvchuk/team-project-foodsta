@@ -1,33 +1,45 @@
+.hero {
+  margin-top: 72px;
+}
 .hero__container {
   @extend %container;
-  display: flex;
-  align-items: center;
+  position: relative;
 
   @include mobile {
     padding-top: 60px;
     padding-bottom: 50px;
   }
 
-  @include tablet {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
     padding-top: 60px;
   }
   @include desktop {
-    padding-top: 159px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
+
+.hero__info {
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    display: inline-block;
+  }
+}
+
 .hero__title {
   font-weight: 700;
   font-size: 28px;
   line-height: 1.18;
-  margin: 0 auto;
-  margin-bottom: 28px;
+  @include mobile {
+    margin: 0 auto;
+    margin-bottom: 28px;
+  }
 
   @include tablet {
     font-weight: 700;
     font-size: 42px;
     line-height: 1.19;
     width: 481px;
-    margin-bottom: 28px;
   }
   @include desktop {
     font-weight: 700;
@@ -45,11 +57,13 @@
   @include tablet {
     font-size: 16px;
     max-width: 336px;
+    margin-top: 44px;
     margin-bottom: 40px;
   }
   @include desktop {
     font-size: 16px;
     max-width: 502px;
+    margin-top: 28px;
     margin-bottom: 40px;
   }
 }
