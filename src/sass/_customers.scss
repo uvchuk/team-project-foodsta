@@ -61,6 +61,14 @@
     }
   }
 
+  // &__item-list {
+  //   display: inline-flex;
+  // }
+
+  &__item-star:not(:last-child) {
+    margin-right: 4px;
+  }
+
   &__item {
     padding: 8px;
     border-radius: 0px 30px 30px 30px;
@@ -156,4 +164,8 @@
     display: inline-block;
     border-right: 0.854167px solid #7eb101;
   }
+}
+
+.custemers-say__item-list {
+  display: inline-flex;
 }
