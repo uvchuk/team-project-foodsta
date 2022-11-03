@@ -1,4 +1,13 @@
 .subscribe {
+  @include mobile {
+    margin-top: -44px;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-top: -74px;
+  }
+  @include desktop {
+    margin-top: -64px;
+  }
   &__image {
     width: 280px;
     height: 78px;
@@ -21,12 +30,11 @@
     }
   }
 
-&__wrap {
-
-  @include desktop {
-  margin-top: 46px;
+  &__wrap {
+    @include desktop {
+      margin-top: 46px;
+    }
   }
-}
 
   &__title {
     font-weight: 700;
@@ -78,9 +86,9 @@
     padding: 12px;
 
     @include mobile {
-    margin-bottom: 20px;
+      margin-bottom: 20px;
     }
-    
+
     @include tablet {
       width: 394px;
       margin-right: 22px;
@@ -120,24 +128,23 @@
   &__btn:focus {
     background-color: var(--btn-bcgd-focus);
   }
-}
 
-.container {
-  @extend %container;
+  &__container {
+    @extend %container;
 
-  padding-bottom: 60px;
+    padding-bottom: 60px;
 
-  @include tablet {
-    padding-bottom: 100px;
+    @include tablet {
+      padding-bottom: 100px;
+    }
+
+    @include desktop {
+      display: flex;
+      flex-direction: row-reverse;
+      padding-bottom: 64px;
+    }
   }
-
-  @include desktop {
-    display: flex;
-    flex-direction: row-reverse;
-    padding-bottom: 64px;
-  }
 }
-
 .btn-wrap {
   @include mobile {
     display: flex;
