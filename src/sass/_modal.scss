@@ -1,0 +1,158 @@
+.backdrop {
+  position: fixed;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: all;
+
+  background-color: var(--backdrop);
+  transform: scale(1);
+  transition-duration: 500ms;
+
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    & .modal {
+      @extend %vs-hidden;
+    }
+  }
+
+  & .modal {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+
+    padding: 32px 20px;
+
+    width: 100vw;
+    max-width: 458px;
+
+    background-color: var(--accent-scnd);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 30px;
+
+    @include tablet {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  & .btn-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+
+    padding: 4px;
+
+    border: none;
+    background-color: var(--tert-bcgd);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+
+    @include animated;
+  }
+
+  & .btn-close__icon {
+    display: block;
+
+    fill: var(--prim-text);
+
+    @include animated(fill);
+  }
+
+  & .btn-close__icon:hover,
+  & .btn-close__icon:focus {
+    fill: var(--accent);
+  }
+
+  & .modal__title {
+    text-align: center;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.2;
+
+    margin-bottom: 20px;
+  }
+
+  & .form__field:nth-child(-n + 2) {
+    margin-bottom: 24px;
+  }
+
+  & .form__field {
+    display: flex;
+    flex-direction: column;
+
+    & .form__label {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.4;
+
+      margin-bottom: 2px;
+      margin-left: 12px;
+
+      color: var(--prim-text);
+    }
+
+    & input {
+      font-size: 16px;
+      line-height: 1.07;
+
+      outline: none;
+
+      width: 100%;
+
+      padding-top: 14px;
+      padding-left: 12px;
+      padding-bottom: 14px;
+
+      border: 1px solid rgba(18, 18, 18, 0.12);
+      box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.15);
+      border-radius: 30px;
+      @include animated(border-color);
+
+      &:hover,
+      &:focus,
+      &:active {
+        border-color: var(--border-color);
+      }
+
+      &::placeholder {
+        color: var(--placeholder);
+      }
+    }
+  }
+
+  & .btn-send {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.5;
+
+    padding: 10px 38px;
+    margin-top: 32px;
+
+    background-color: var(--tert-bcgd);
+    border: 2px solid #7eb101;
+    border-radius: 30px;
+
+    @include animated;
+  }
+
+  & .btn-send:hover,
+  & .btn-send:focus {
+    background-color: var(--accent);
+  }
+}
