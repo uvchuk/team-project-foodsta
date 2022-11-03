@@ -1,0 +1,48 @@
+<section class="subscribe">
+  <div class="container">
+    <div class="subscribe__image">
+      <picture>
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./images/banana-desktop.png    1x,
+            ./images/banana-desktop-2x.png 2x
+          "
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/banana-tablet.png    1x,
+            ./images/banana-tablet-2x.png 2x
+          "
+        />
+        <source
+          media="(max-width: 767px)"
+          srcset="./images/banana-mob.png 1x, ./images/banana-mob-2x.png 2x"
+        />
+        <img src="./images/banana-desktop.png" alt="Banana" />
+      </picture>
+    </div>
+    <div class="subscribe__wrap">
+      <h2 class="subscribe__title">Subscribe To Get Special Offers</h2>
+      <p class="subscribe__text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique.
+      </p>
+      <div>
+        <form class="subscribe__form">
+          <label>
+            <input
+              type="email"
+              class="subscribe__input"
+              placeholder="Enter your email"
+            />
+          </label>
+          <div class="btn-wrap">
+            <button type="submit" class="subscribe__btn">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
