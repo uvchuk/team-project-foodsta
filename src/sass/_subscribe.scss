@@ -84,6 +84,12 @@
     border-radius: 30px;
     outline: none;
     padding: 12px;
+    @include animated(border-color);
+
+    &:hover,
+    &:focus {
+      border-color: var(--accent);
+    }
 
     @include mobile {
       margin-bottom: 20px;
@@ -104,11 +110,6 @@
     font-size: 12px;
     line-height: 1.5;
     color: #505050;
-  }
-
-  &__input:focus {
-    border: 0.854167px solid var(--border-color);
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__btn {
