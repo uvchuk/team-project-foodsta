@@ -110,13 +110,22 @@
       display: inline-block;
       padding-top: 18px;
       padding-bottom: 18px;
+      &::after {
+        content: '';
+        opacity: 0;
+        display: block;
+        border-bottom: 1px solid var(--accent);
+        @include animated(opacity);
+      }
+      &:hover,
+      &:focus,
+      &:active {
+        &::after {
+          opacity: 1;
+        }
+        color: var(--accent);
+      }
     }
-  }
-
-  &__link:hover,
-  &__link:focus {
-    text-decoration-line: underline;
-    color: var(--accent);
   }
 }
 

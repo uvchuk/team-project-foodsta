@@ -104,14 +104,21 @@
     padding-bottom: 28px;
     font-size: 14px;
     line-height: 1.14;
-    text-decoration: none;
     color: var(--scnd-text);
     @include animated(color);
+    &::after {
+      content: '';
+      opacity: 0;
+      display: block;
+      border-bottom: 1px solid var(--accent);
+      @include animated(opacity);
+    }
     &:hover,
     &:focus,
     &:active {
-      text-decoration-line: underline;
-
+      &::after {
+        opacity: 1;
+      }
       color: var(--accent);
     }
   }
