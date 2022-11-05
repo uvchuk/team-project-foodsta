@@ -1,0 +1,28 @@
+.input {
+  &-email {
+    &:invalid:not(:placeholder-shown) {
+      border-color: var(--error);
+    }
+    &:valid:not(:placeholder-shown) {
+      border-color: var(--border-color);
+    }
+    &:invalid:not(:placeholder-shown) + .input-error {
+      display: block;
+      position: absolute;
+      bottom: -20px;
+    }
+  }
+
+  &-error {
+    display: none;
+    font-size: 10px;
+    line-height: 1.5;
+    color: var(--error);
+
+    &-icon {
+      display: inline-block;
+      margin-right: 4px;
+      vertical-align: top;
+    }
+  }
+}

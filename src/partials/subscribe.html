@@ -36,9 +36,15 @@
               id="subscribe_email"
               name="email"
               type="email"
-              class="subscribe__input"
+              class="subscribe__input input-email"
               placeholder="Enter your email"
             />
+            <span class="input-error">
+              <svg class="input-error-icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-error"></use>
+              </svg>
+              Not a valid email address (example@email.com)
+            </span>
           </label>
           <div class="btn-wrap">
             <button type="submit" class="subscribe__btn">Subscribe</button>

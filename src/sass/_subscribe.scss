@@ -74,6 +74,7 @@
   &__form {
     @include tablet {
       display: flex;
+      position: relative;
     }
   }
 

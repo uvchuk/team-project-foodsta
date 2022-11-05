@@ -31,10 +31,16 @@
           <input
             type="email"
             name="email"
-            class="footer-form__input"
+            class="footer-form__input input-email"
             placeholder="Enter your email"
             id="email"
           />
+          <span class="input-error">
+            <svg class="input-error-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-error"></use>
+            </svg>
+            Not a valid email address (example@email.com)
+          </span>
           <button type="submit" class="footer-form__btn">Subscribe</button>
         </div>
         <p class="footer-form__text">
