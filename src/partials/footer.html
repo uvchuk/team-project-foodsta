@@ -2,7 +2,7 @@
   <div class="container">
     <div class="footer-start">
       <div class="footer__box">
-        <a href="#" class="logo">
+        <a href="#body" class="logo">
           <svg class="logo__icon">
             <use href="./images/sprite.svg#logo"></use>
           </svg>
@@ -26,21 +26,23 @@
         </ul>
       </div>
       <form action="" class="footer-form">
-        <label class="footer-form__title" for="email">Subscribe</label>
         <div class="footer-form__wrapper">
-          <input
-            type="email"
-            name="email"
-            class="footer-form__input input-email"
-            placeholder="Enter your email"
-            id="email"
-          />
-          <span class="input-error">
-            <svg class="input-error-icon" width="12" height="12">
-              <use href="./images/sprite.svg#icon-error"></use>
-            </svg>
-            Not a valid email address (example@email.com)
-          </span>
+          <label class="footer-form__label" for="email">
+            <span class="footer-form__title">Subscribe</span>
+            <input
+              type="email"
+              name="email"
+              class="footer-form__input input-validator"
+              placeholder="Enter your email"
+              id="email"
+            />
+            <span class="input-error">
+              <svg class="input-error-icon" width="12" height="12">
+                <use href="./images/sprite.svg#icon-error"></use>
+              </svg>
+              Not a valid email address (example@email.com)
+            </span>
+          </label>
           <button type="submit" class="footer-form__btn">Subscribe</button>
         </div>
         <p class="footer-form__text">

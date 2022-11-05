@@ -71,10 +71,23 @@
     }
   }
 
+  &__label {
+    display: block;
+    position: relative;
+    @include mobile {
+      margin-bottom: 20px;
+    }
+    @include tablet {
+      margin-right: 22px;
+    }
+    @include desktop {
+      margin-right: 32px;
+    }
+  }
+
   &__form {
     @include tablet {
       display: flex;
-      position: relative;
     }
   }
 
@@ -92,18 +105,12 @@
       border-color: var(--accent);
     }
 
-    @include mobile {
-      margin-bottom: 20px;
-    }
-
     @include tablet {
       width: 394px;
-      margin-right: 22px;
     }
 
     @include desktop {
       width: 394px;
-      margin-right: 32px;
     }
   }
 

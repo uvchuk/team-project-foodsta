@@ -141,21 +141,30 @@
   }
 
   &__wrapper {
-    margin-top: 12px;
     margin-bottom: 20px;
-    position: relative;
     @include tablet {
       display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: block;
+    font-weight: 500;
+    line-height: 1.5;
+    color: var(--prim-text);
+    @include mobile {
+      margin-bottom: 20px;
     }
   }
 
   &__title {
-    font-weight: 500;
-    line-height: 1.5;
-    color: var(--prim-text);
+    display: block;
   }
 
   &__input {
+    margin-top: 12px;
     width: 100%;
     height: 42px;
     font-size: 12px;
@@ -176,10 +185,6 @@
       border-color: var(--accent);
     }
 
-    @include mobile {
-      margin-bottom: 20px;
-    }
-
     @include tablet {
       width: 279px;
     }
@@ -189,7 +194,7 @@
     display: block;
     margin-left: auto;
     cursor: pointer;
-
+    height: 42px;
     font-family: inherit;
     font-weight: 500;
     font-size: 13px;

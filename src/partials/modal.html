@@ -11,19 +11,29 @@
         <label for="name" class="form__label">Name</label>
         <div class="form__input">
           <input
+            class="modal-input input-validator"
             type="text"
             name="name"
             id="name"
             placeholder="Your name"
             required
+            pattern="^[А-Яа-яA-Za-zІ-іЇ-ї\s]+$"
+            minlength="3"
+            maxlength="25"
           />
+          <span class="input-error">
+            <svg class="input-error-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-error"></use>
+            </svg>
+            The name must be between 3 and 25 characters
+          </span>
         </div>
       </div>
       <div class="form__field">
         <label for="tel" class="form__label">Phone number</label>
         <div class="form__input">
           <input
-            class="tel"
+            class="modal-input input-validator"
             type="tel"
             name="tel"
             id="tel"
@@ -31,19 +41,34 @@
             required
             minlength="17"
             maxlength="17"
+            pattern="^\+\d{2} \(\d{3}\) \d{3}-\d{2}-\d{2}$"
+            data-mask="+38 (999) 999-99-99"
           />
+          <span class="input-error">
+            <svg class="input-error-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-error"></use>
+            </svg>
+            This phone must be in the format 099 000 00 00
+          </span>
         </div>
       </div>
       <div class="form__field">
         <label for="mail" class="form__label">E-mail</label>
         <div class="form__input">
           <input
+            class="modal-input input-validator"
             type="email"
             name="mail"
             id="mail"
             placeholder="example@gmail.com"
             required
           />
+          <span class="input-error">
+            <svg class="input-error-icon" width="12" height="12">
+              <use href="./images/sprite.svg#icon-error"></use>
+            </svg>
+            Please enter a valid email address
+          </span>
         </div>
       </div>
       <button type="submit" class="btn-send">Send</button>
