@@ -7,24 +7,34 @@
       border-color: var(--border-color);
     }
   }
+  &-empty,
   &-error {
     display: none;
     font-size: 10px;
     line-height: 1.5;
     color: var(--error);
-    .input-validator:invalid:not(:placeholder-shown) + & {
-      display: block;
-      position: absolute;
-      bottom: -18px;
-    }
     &-icon {
       display: inline-block;
       margin-right: 4px;
       vertical-align: baseline;
     }
   }
+  &-empty {
+    .input-validator:placeholder-shown + & {
+      display: block;
+      position: absolute;
+      bottom: -18px;
+    }
+  }
+  &-error {
+    .input-validator:invalid:not(:placeholder-shown) ~ & {
+      display: block;
+      position: absolute;
+      bottom: -18px;
+    }
+  }
 }
-
+.form__input .input-empty,
 .form__input .input-error {
   margin-left: 10px;
   font-weight: 500;
@@ -35,4 +45,10 @@
   @include tablet {
     font-size: 13px;
   }
+}
+
+.form:invalid .btn-send {
+  cursor: initial;
+  background-color: var(--tert-bcgd);
+  border-color: var(--error);
 }

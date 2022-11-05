@@ -10,7 +10,6 @@
   background-color: var(--backdrop);
   transform: scale(1);
   transition-duration: 500ms;
-
   &.is-hidden {
     opacity: 0;
     pointer-events: none;
@@ -150,7 +149,7 @@
     background-color: var(--tert-bcgd);
     border: 2px solid #7eb101;
     border-radius: 30px;
-
+    cursor: pointer;
     @include animated;
   }
 
