@@ -12,7 +12,7 @@
     padding-bottom: 60px;
     background-image: url('../images/background1-mob.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 100%;
 
     @include retina {
       background-image: url('../images/background1-mob-2x.png');
