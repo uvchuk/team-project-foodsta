@@ -11,6 +11,6 @@
 
   function toggleModal() {
     refs.modal.classList.toggle('is-hidden');
-    refs.bodyLock.classList.toggle('locked');
+    refs.bodyLock.classList.toggle('adaptive');
   }
 })();
